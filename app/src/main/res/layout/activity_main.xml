@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stateloss.MainActivity">
+
+    <Button
+        android:text="Change (don't allow state loss)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/disallow_state_loss"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"/>
+
+    <Button
+        android:text="Change (allow state loss)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/allow_state_loss"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/disallow_state_loss"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="384dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main"/>
+
+    <Button
+        android:text="Change (no state loss)"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:id="@+id/no_state_loss"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/allow_state_loss"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"/>
+
+</android.support.constraint.ConstraintLayout>
